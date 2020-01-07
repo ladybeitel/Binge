@@ -10,11 +10,8 @@ import UIKit
 
 class EpisodeTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var episodeTitleLabel: UILabel!
-    
+    @IBOutlet weak var episodeNameLabel: UILabel!
     @IBOutlet weak var episodeNumberLabel: UILabel!
-    
-    
     @IBOutlet weak var episodeWatchedSwitch: UISwitch!
     
     override func awakeFromNib() {
