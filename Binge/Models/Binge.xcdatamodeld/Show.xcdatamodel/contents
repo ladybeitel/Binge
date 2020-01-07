@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Episode" representedClassName="Episode" syncable="YES" codeGenerationType="class">
+        <attribute name="number" attributeType="Integer 16" minValueString="1" defaultValueString="1" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="season" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Season" inverseName="episodes" inverseEntity="Season"/>
+    </entity>
+    <entity name="Season" representedClassName="Season" syncable="YES" codeGenerationType="class">
+        <attribute name="number" attributeType="Integer 16" minValueString="1" defaultValueString="1" usesScalarValueType="YES"/>
+        <relationship name="episodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Episode" inverseName="season" inverseEntity="Episode"/>
+        <relationship name="show" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Show" inverseName="seasons" inverseEntity="Show"/>
+    </entity>
+    <entity name="Show" representedClassName="Show" syncable="YES">
+        <attribute name="name" attributeType="String"/>
+        <attribute name="releaseDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="seasons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Season" inverseName="show" inverseEntity="Season"/>
+    </entity>
+    <elements>
+        <element name="Episode" positionX="-70" positionY="243.53515625" width="128" height="88"/>
+        <element name="Season" positionX="-322.3125" positionY="188.6796875" width="128" height="88"/>
+        <element name="Show" positionX="-572.44140625" positionY="116.80078125" width="128" height="88"/>
+    </elements>
+</model>
