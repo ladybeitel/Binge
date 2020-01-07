@@ -11,4 +11,5 @@ import Foundation
 struct ShowRepresentation {
     var name: String
     var releaseDate: Date?
+    var id: Int
 }

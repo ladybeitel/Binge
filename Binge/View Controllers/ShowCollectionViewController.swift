@@ -63,20 +63,21 @@ class ShowCollectionViewController: UICollectionViewController {
         return fetchResultsController.sections?[section].numberOfObjects ?? 0
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowDetailVCSegue" {
-            let destinationVC = segue.destination as? ShowDetailViewController
-            destinationVC?.postController = postController
-            
-        } else if segue.identifier == "ViewVideoPost" {
-            let destinationVC = segue.destination as? VideoPostDetailTableViewController
-            
-            guard let indexPath = collectionView.indexPathsForSelectedItems?.first else { return }
-            
-            destinationVC?.postController = postController
-            destinationVC?.post = postController.posts[indexPath.row]
-        }
-    }
+    // MARK: - Navigation
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "ShowDetailVCSegue" {
+//            let destinationVC = segue.destination as? ShowDetailViewController
+//            destinationVC?.postController = postController
+//            
+//        } else if segue.identifier == "ViewVideoPost" {
+//            let destinationVC = segue.destination as? VideoPostDetailTableViewController
+//            
+//            guard let indexPath = collectionView.indexPathsForSelectedItems?.first else { return }
+//            
+//            destinationVC?.postController = postController
+//            destinationVC?.post = postController.posts[indexPath.row]
+//        }
+//    }
 }
 
 // MARK: - NSFetchedResultsControllerDelegate

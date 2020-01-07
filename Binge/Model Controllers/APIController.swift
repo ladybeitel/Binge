@@ -89,7 +89,7 @@ class APIController {
                             let formatter = DateFormatter()
                             formatter.dateFormat = "yyyy-MM-dd"
                             let date = formatter.date(from: searchResult["firstAired"].stringValue)
-                            let show = ShowRepresentation(name: searchResult["seriesName"].stringValue, releaseDate: date ?? nil)
+                            let show = ShowRepresentation(name: searchResult["seriesName"].stringValue, releaseDate: date ?? nil, id: Int(searchResult["id"].numberValue))
                             searchResults.append(show)
                         }
                         onSuccess(searchResults)
