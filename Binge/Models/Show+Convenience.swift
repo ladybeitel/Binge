@@ -12,18 +12,34 @@ import CoreData
 extension Show {
     var showRepresentation: ShowRepresentation? {
         guard let releaseDate = releaseDate else { return nil }
-        return ShowRepresentation(name: name, releaseDate: releaseDate, id: Int(id))
+        return ShowRepresentation(banner: banner,
+                                  id: id,
+                                  name: name,
+                                  network: network,
+                                  overview: overview,
+                                  releaseDate: releaseDate,
+                                  status: status)
     }
     
-    convenience init(name: String, releaseDate: Date?, id: Int, context: NSManagedObjectContext) {
+    convenience init(banner: String?, id: Int16, name: String, network: String?, overview: String?, releaseDate: Date?, status: String?, context: NSManagedObjectContext) {
         self.init(context: context)
+        self.banner = banner
+        self.id = id
         self.name = name
+        self.network = network
+        self.overview = overview
         self.releaseDate = releaseDate
-        self.id = Int16(id)
+        self.status = status
     }
     
     @discardableResult convenience init?(showRepresentation: ShowRepresentation, context: NSManagedObjectContext) {
-        guard let releaseDate = showRepresentation.releaseDate else { return nil }
-        self.init(name: showRepresentation.name, releaseDate: releaseDate, id: showRepresentation.id, context: context)
+        self.init(banner: showRepresentation.banner,
+                  id: showRepresentation.id,
+                  name: showRepresentation.name,
+                  network: showRepresentation.network,
+                  overview: showRepresentation.overview,
+                  releaseDate: showRepresentation.releaseDate,
+                  status: showRepresentation.status,
+                  context: context)
     }
 }

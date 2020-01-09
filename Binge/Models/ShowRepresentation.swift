@@ -9,7 +9,11 @@
 import Foundation
 
 struct ShowRepresentation {
+    var banner: String?
+    var id: Int16
     var name: String
+    var network: String?
+    var overview: String?
     var releaseDate: Date?
-    var id: Int
+    var status: String?
 }

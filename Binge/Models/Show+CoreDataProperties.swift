@@ -2,7 +2,7 @@
 //  Show+CoreDataProperties.swift
 //  Binge
 //
-//  Created by Ciara Beitel on 1/7/20.
+//  Created by Ciara Beitel on 1/8/20.
 //  Copyright © 2020 Ciara Beitel. All rights reserved.
 //
 //
@@ -17,9 +17,13 @@ extension Show {
         return NSFetchRequest<Show>(entityName: "Show")
     }
 
-    @NSManaged public var name: String
-    @NSManaged public var releaseDate: Date?
+    @NSManaged public var banner: String?
     @NSManaged public var id: Int16
+    @NSManaged public var name: String
+    @NSManaged public var network: String?
+    @NSManaged public var overview: String?
+    @NSManaged public var releaseDate: Date?
+    @NSManaged public var status: String?
     @NSManaged public var seasons: NSSet?
 
 }

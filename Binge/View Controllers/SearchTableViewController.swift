@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SearchTableViewController: UIViewController {
     
@@ -20,19 +21,6 @@ class SearchTableViewController: UIViewController {
         searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
-        
-    }
-    
-    func addShowToBingeList(alert: UIAlertAction!) {
-        
-    }
-
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
 }
 
@@ -43,31 +31,26 @@ extension SearchTableViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchShowCell", for: indexPath)
-        
         let show = searchResults[indexPath.row]
-        
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy"
-        
         cell.textLabel?.text = show?.name
         if let releaseDate = show?.releaseDate {
             cell.detailTextLabel?.text = formatter.string(from: releaseDate)
         }
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedShow = searchResults[indexPath.row]
         guard let show = selectedShow else { return }
-    
         let alertController = UIAlertController(title: "Add \"\(show.name)\"", message: "Do you wish to add \"\(show.name)\" to your Binge list?", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         alertController.addAction(UIAlertAction(title: "Add", style: .default) { alert in
-            let context = CoreDataStack.shared.container.newBackgroundContext()
-            let _ = Show(showRepresentation: show, context: context)
-            CoreDataStack.shared.save(context: context)
-            self.navigationController?.popViewController(animated: true)
+           let context = CoreDataStack.shared.container.newBackgroundContext()
+           let _ = Show(showRepresentation: show, context: context)
+           CoreDataStack.shared.save(context: context)
+           self.navigationController?.popViewController(animated: true)
         })
         present(alertController, animated: true, completion: nil)
     }

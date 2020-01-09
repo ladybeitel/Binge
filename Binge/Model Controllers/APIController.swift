@@ -74,9 +74,7 @@ class APIController {
     func searchShows(name: String, onSuccess: @escaping([ShowRepresentation?]) -> Void) {
         queue.sync {
             // The TV DB requires parameters and AF likes them as a dictionary [String: String]
-            let parameters = [
-                "name": name
-            ]
+            let parameters = ["name": name]
         
             sessionManager.request("https://api.thetvdb.com/search/series", parameters: parameters).responseJSON { response in
                 switch (response.result) {
@@ -89,7 +87,16 @@ class APIController {
                             let formatter = DateFormatter()
                             formatter.dateFormat = "yyyy-MM-dd"
                             let date = formatter.date(from: searchResult["firstAired"].stringValue)
-                            let show = ShowRepresentation(name: searchResult["seriesName"].stringValue, releaseDate: date ?? nil, id: Int(searchResult["id"].numberValue))
+                            let nsId = searchResult["id"].numberValue
+                            let show = ShowRepresentation(
+                                banner: searchResult["banner"].stringValue,
+                                id: nsId.int16Value,
+                                name: searchResult["seriesName"].stringValue,
+                                network: searchResult["network"].stringValue,
+                                overview: searchResult["overview"].stringValue,
+                                releaseDate: date ?? nil,
+                                status: searchResult["status"].stringValue
+                            )
                             searchResults.append(show)
                         }
                         onSuccess(searchResults)
@@ -131,11 +138,9 @@ final class JWTAccessTokenAdapter: RequestAdapter {
 
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
         var urlRequest = urlRequest
-
         if let urlString = urlRequest.url?.absoluteString, urlString.hasPrefix("https://api.thetvdb.com") {
             urlRequest.setValue("Bearer " + self.authToken, forHTTPHeaderField: "Authorization")
         }
-
         return urlRequest
     }
 }

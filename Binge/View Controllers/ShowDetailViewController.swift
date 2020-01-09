@@ -11,6 +11,11 @@ import UIKit
 class ShowDetailViewController: UIViewController {
     
     // MARK: - Properties
+    var show: Show? {
+        didSet {
+            updateView()
+        }
+    }
     
     // MARK: - Outlets
     @IBOutlet weak var showPosterImage: UIImageView!
@@ -23,10 +28,21 @@ class ShowDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateView()
     }
     
+    func updateView() {
+        guard let show = show, let releaseDate = show.releaseDate else { return }
+        if isViewLoaded {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MMMM yyyy"
+            showName.text = show.name.capitalized
+            showReleaseDate.text = formatter.string(from: releaseDate)
+            showNetwork.text = show.network
+            showStatus.text = show.status
+            showDescription.text = show.overview
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -37,5 +53,4 @@ class ShowDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

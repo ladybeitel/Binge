@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7711050223C5086800933BC1 /* ShowDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7711050123C5086800933BC1 /* ShowDetailViewController.swift */; };
-		7711050623C5350400933BC1 /* Show+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7711050523C5350400933BC1 /* Show+CoreDataProperties.swift */; };
+		7711050A23C66C8C00933BC1 /* Show+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7711050923C66C8C00933BC1 /* Show+CoreDataProperties.swift */; };
 		77139DBE23BDBE9600294724 /* ShowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77139DBD23BDBE9600294724 /* ShowCollectionViewCell.swift */; };
 		77139DD223BFF63900294724 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77139DD123BFF63900294724 /* APIController.swift */; };
 		772B58B823C149320017F287 /* ShowRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B58B723C149320017F287 /* ShowRepresentation.swift */; };
@@ -31,7 +31,7 @@
 		2B4783AD79A94B289CC1B86A /* Pods_Binge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Binge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50106E8ED39CCBDEF15607CE /* Pods-Binge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Binge.debug.xcconfig"; path = "Target Support Files/Pods-Binge/Pods-Binge.debug.xcconfig"; sourceTree = "<group>"; };
 		7711050123C5086800933BC1 /* ShowDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailViewController.swift; sourceTree = "<group>"; };
-		7711050523C5350400933BC1 /* Show+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Show+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7711050923C66C8C00933BC1 /* Show+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Show+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		77139DBD23BDBE9600294724 /* ShowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCollectionViewCell.swift; sourceTree = "<group>"; };
 		77139DD123BFF63900294724 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		772B58B723C149320017F287 /* ShowRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRepresentation.swift; sourceTree = "<group>"; };
@@ -145,8 +145,8 @@
 		77C6E86C23B504850073F258 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7711050923C66C8C00933BC1 /* Show+CoreDataProperties.swift */,
 				77DD7E4023BA9A0400A8F9A5 /* Binge.xcdatamodeld */,
-				7711050523C5350400933BC1 /* Show+CoreDataProperties.swift */,
 				77DD7E4723BAA34D00A8F9A5 /* CoreDataStack.swift */,
 				77DD7E4523BA9F5200A8F9A5 /* Show+Convenience.swift */,
 				7771320723C429B9006258D2 /* Show+CoreDataClass.swift */,
@@ -291,7 +291,7 @@
 				77DD7E4623BA9F5200A8F9A5 /* Show+Convenience.swift in Sources */,
 				77139DBE23BDBE9600294724 /* ShowCollectionViewCell.swift in Sources */,
 				77139DD223BFF63900294724 /* APIController.swift in Sources */,
-				7711050623C5350400933BC1 /* Show+CoreDataProperties.swift in Sources */,
+				7711050A23C66C8C00933BC1 /* Show+CoreDataProperties.swift in Sources */,
 				773439D323B958BD004A525E /* ShowCollectionViewController.swift in Sources */,
 				77DD7E4223BA9A0400A8F9A5 /* Binge.xcdatamodeld in Sources */,
 				77C6E87323B526B70073F258 /* SearchTableViewController.swift in Sources */,

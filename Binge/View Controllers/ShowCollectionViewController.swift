@@ -41,10 +41,8 @@ class ShowCollectionViewController: UICollectionViewController {
     func setupDataSource() {
         dataSource = UICollectionViewDiffableDataSource <Int, Show>(collectionView: self.collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, show: Show) -> UICollectionViewCell? in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ShowCollectionViewCell
-            cell.showName.text = show.name
             return cell
         }
-        
         updateCollectionView()
     }
     
@@ -64,21 +62,16 @@ class ShowCollectionViewController: UICollectionViewController {
     }
     
     // MARK: - Navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "ShowDetailVCSegue" {
-//            let destinationVC = segue.destination as? ShowDetailViewController
-//            destinationVC?.postController = postController
-//            
-//        } else if segue.identifier == "ViewVideoPost" {
-//            let destinationVC = segue.destination as? VideoPostDetailTableViewController
-//            
-//            guard let indexPath = collectionView.indexPathsForSelectedItems?.first else { return }
-//            
-//            destinationVC?.postController = postController
-//            destinationVC?.post = postController.posts[indexPath.row]
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetailVCSegue" {
+            guard let detailVC = segue.destination as? ShowDetailViewController,
+                let cell = sender as? ShowCollectionViewCell,
+                let indexPath = self.collectionView.indexPath(for: cell) else { return }
+            detailVC.show = fetchResultsController.object(at: indexPath)
+        }
+    }
 }
+
 
 // MARK: - NSFetchedResultsControllerDelegate
 extension ShowCollectionViewController: NSFetchedResultsControllerDelegate {
