@@ -51,7 +51,7 @@ class ShowDetailViewController: UIViewController {
     }
     
     func updateView() {
-        guard let show = show, let releaseDate = show.releaseDate else { return }
+        guard let show = show, let banner = show.banner, let releaseDate = show.releaseDate else { return }
         if isViewLoaded {
             let formatter = DateFormatter()
             formatter.dateFormat = "MMMM yyyy"
@@ -60,25 +60,26 @@ class ShowDetailViewController: UIViewController {
             showNetwork.text = show.network
             showStatus.text = show.status
             showDescription.text = show.overview
+            showPosterImage.load(url: banner)
         }
     }
     
     func getFakeData() {
-        let episode1 = EpisodeRepresentation(id: 0001, name: "Pilot", episodeNumber: 1, seriesId: 0001, overview: "Episode Overview")
-        let episode2 = EpisodeRepresentation(id: 0002, name: "Diversity Day", episodeNumber: 2, seriesId: 0002, overview: "Episode Overview")
-        let episode3 = EpisodeRepresentation(id: 0003, name: "Health Care", episodeNumber: 3, seriesId: 0003, overview: "Episode Overview")
-        let episode4 = EpisodeRepresentation(id: 0004, name: "The Alliance", episodeNumber: 4, seriesId: 0004, overview: "Episode Overview")
-        let episode5 = EpisodeRepresentation(id: 0005, name: "Basketball", episodeNumber: 5, seriesId: 0005, overview: "Episode Overview")
-        let episode6 = EpisodeRepresentation(id: 0001, name: "Hot Girl", episodeNumber: 1, seriesId: 0006, overview: "Episode Overview")
-        let episode7 = EpisodeRepresentation(id: 0002, name: "The Dundies", episodeNumber: 2, seriesId: 0007, overview: "Episode Overview")
-        let episode8 = EpisodeRepresentation(id: 0003, name: "Office Olympics", episodeNumber: 3, seriesId: 0008, overview: "Episode Overview")
-        let episode9 = EpisodeRepresentation(id: 0004, name: "The Fire", episodeNumber: 4, seriesId: 0009, overview: "Episode Overview")
-        let episode10 = EpisodeRepresentation(id: 0001, name: "Halloween", episodeNumber: 1, seriesId: 0010, overview: "Episode Overview")
-        let episode11 = EpisodeRepresentation(id: 0002, name: "The Fight", episodeNumber: 2, seriesId: 0011, overview: "Episode Overview")
-        let episode12 = EpisodeRepresentation(id: 0003, name: "The Client", episodeNumber: 3, seriesId: 0012, overview: "Episode Overview")
-        let episode13 = EpisodeRepresentation(id: 0004, name: "Performance Review", episodeNumber: 4, seriesId: 0013, overview: "Episode Overview")
-        let episode14 = EpisodeRepresentation(id: 0005, name: "E-Mail Surveillance", episodeNumber: 5, seriesId: 0014, overview: "Episode Overview")
-        let episode15 = EpisodeRepresentation(id: 0006, name: "Christmas Party", episodeNumber: 6, seriesId: 0015, overview: "Episode Overview")
+        let episode1 = EpisodeRepresentation(id: 0001, name: "Pilot", episodeNumber: 1, overview: "Episode Overview")
+        let episode2 = EpisodeRepresentation(id: 0002, name: "Diversity Day", episodeNumber: 2, overview: "Episode Overview")
+        let episode3 = EpisodeRepresentation(id: 0003, name: "Health Care", episodeNumber: 3, overview: "Episode Overview")
+        let episode4 = EpisodeRepresentation(id: 0004, name: "The Alliance", episodeNumber: 4, overview: "Episode Overview")
+        let episode5 = EpisodeRepresentation(id: 0005, name: "Basketball", episodeNumber: 5, overview: "Episode Overview")
+        let episode6 = EpisodeRepresentation(id: 0001, name: "Hot Girl", episodeNumber: 1, overview: "Episode Overview")
+        let episode7 = EpisodeRepresentation(id: 0002, name: "The Dundies", episodeNumber: 2, overview: "Episode Overview")
+        let episode8 = EpisodeRepresentation(id: 0003, name: "Office Olympics", episodeNumber: 3, overview: "Episode Overview")
+        let episode9 = EpisodeRepresentation(id: 0004, name: "The Fire", episodeNumber: 4, overview: "Episode Overview")
+        let episode10 = EpisodeRepresentation(id: 0001, name: "Halloween", episodeNumber: 1, overview: "Episode Overview")
+        let episode11 = EpisodeRepresentation(id: 0002, name: "The Fight", episodeNumber: 2, overview: "Episode Overview")
+        let episode12 = EpisodeRepresentation(id: 0003, name: "The Client", episodeNumber: 3, overview: "Episode Overview")
+        let episode13 = EpisodeRepresentation(id: 0004, name: "Performance Review", episodeNumber: 4, overview: "Episode Overview")
+        let episode14 = EpisodeRepresentation(id: 0005, name: "E-Mail Surveillance", episodeNumber: 5, overview: "Episode Overview")
+        let episode15 = EpisodeRepresentation(id: 0006, name: "Christmas Party", episodeNumber: 6, overview: "Episode Overview")
         
         let season1 = FakeSeason(episodes: [episode1, episode2, episode3, episode4, episode5])
         let season2 = FakeSeason(episodes: [episode6, episode7, episode8, episode9])

@@ -111,12 +111,57 @@ class APIController {
     }
     
     func getEpisodesForShow(id: Int, onSuccess: @escaping([EpisodeRepresentation?]) -> Void) {
-        // queue.sync
-        // get episodes via show id
-        // paginate recursively, store results temporarily
-        // group by season
-        // create season and associate back to show
-        // create episodes and associate back to season
+        queue.sync {
+            let seriesId = String(id)
+            sessionManager.request("https://api.thetvdb.com/series/\(seriesId)/episodes").responseJSON { response in
+                switch (response.result) {
+                case .success(let value):
+                    let jsonData = JSON(value)
+                    // "absoluteNumber": 0,
+                    // "airedEpisodeNumber": 0,
+                    // "airedSeason": 0,
+                    // "airsAfterSeason": 0,
+                    // "airsBeforeEpisode": 0,
+                    // "airsBeforeSeason": 0,
+                    // "episodeName": "string",
+                    // "firstAired": "string",
+                    // "id": 0,
+                    // "overview": "string",
+                    // "seriesId": "string",
+                    
+                    // paginate recursively (100 results per page), check "links" values, store results temporarily
+                    // group by season
+                    // create season and associate back to show
+                    // create episodes and associate back to season
+                    let episodesResultArray = jsonData["data"].arrayValue
+                    var episodes: [EpisodeRepresentation] = []
+                    DispatchQueue.main.async {
+                        for episode in episodesResultArray {
+                            let formatter = DateFormatter()
+                            formatter.dateFormat = "yyyy-MM-dd"
+                            let date = formatter.date(from: episode["firstAired"].stringValue)
+                            let nsId = episode["id"].numberValue
+                            let episode = EpisodeRepresentation(
+                                id: nsId.int16Value,
+                                name: episode["episodeName"].stringValue,
+                                episodeNumber: 1,
+                                overview: episode["overview"].stringValue,
+                                releaseDate: date ?? nil
+                            )
+                            episodes.append(episode)
+                        }
+                        onSuccess(episodes)
+                    }
+                    
+                    print("success")
+                case .failure(_):
+                    // TODO: handle 401 auth token is missing or expired
+                    // TODO: handle 404 series does not exist
+                    print("failure")
+                }
+            }
+            
+        }
     }
 }
 

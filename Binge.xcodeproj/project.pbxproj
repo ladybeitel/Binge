@@ -66,6 +66,7 @@
 		771FE17823C785880038D59C /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
 		771FE17923C785890038D59C /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		771FE18823C79D860038D59C /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		771FE18A23C7BAA50038D59C /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		772B58B723C149320017F287 /* ShowRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRepresentation.swift; sourceTree = "<group>"; };
 		773439D223B958BD004A525E /* ShowCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCollectionViewController.swift; sourceTree = "<group>"; };
 		7771320723C429B9006258D2 /* Show+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Show+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -153,6 +154,7 @@
 				77C6E86C23B504850073F258 /* Models */,
 				77C6E86823B504480073F258 /* Resources */,
 				771FE18823C79D860038D59C /* UIImage+Extension.swift */,
+				771FE18A23C7BAA50038D59C /* TODO.md */,
 			);
 			path = Binge;
 			sourceTree = "<group>";

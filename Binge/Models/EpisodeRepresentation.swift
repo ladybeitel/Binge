@@ -12,6 +12,6 @@ struct EpisodeRepresentation {
     var id: Int16
     var name: String // episodeName
     var episodeNumber: Int16 // airedEpisodeNumber
-    var seriesId: Int16
     var overview: String
+    var releaseDate: Date? // firstAired
 }

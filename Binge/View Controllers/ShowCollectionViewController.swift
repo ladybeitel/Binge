@@ -10,12 +10,15 @@ import UIKit
 import CoreData
 
 private let reuseIdentifier = "ShowCollectionViewCell"
+enum Section: CaseIterable {
+    case added
+}
 
 class ShowCollectionViewController: UICollectionViewController {
     
     // MARK: - Properties
-    private var dataSource: UICollectionViewDiffableDataSource<Int, Show>?
-    private var dataSourceSnapshot = NSDiffableDataSourceSnapshot<Int, Show>()
+    private var dataSource: UICollectionViewDiffableDataSource<Section, Show>?
+    private var dataSourceSnapshot = NSDiffableDataSourceSnapshot<Section, Show>()
     
     lazy var fetchResultsController: NSFetchedResultsController<Show> = {
         let fetchRequest: NSFetchRequest<Show> = Show.createFetchRequest()
@@ -36,19 +39,23 @@ class ShowCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDataSource()
+        self.navigationController?.navigationBar.tintColor = UIColor.systemPurple
     }
     
     func setupDataSource() {
-        dataSource = UICollectionViewDiffableDataSource <Int, Show>(collectionView: self.collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, show: Show) -> UICollectionViewCell? in
+        dataSource = UICollectionViewDiffableDataSource <Section, Show>(collectionView: self.collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, show: Show) -> UICollectionViewCell? in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ShowCollectionViewCell
+            if let banner = show.banner {
+                cell.showBannerImage.load(url: banner)
+            }
             return cell
         }
         updateCollectionView()
     }
     
     func updateCollectionView() {
-        dataSourceSnapshot = NSDiffableDataSourceSnapshot<Int, Show>()
-        dataSourceSnapshot.appendSections([0])
+        dataSourceSnapshot = NSDiffableDataSourceSnapshot<Section, Show>()
+        dataSourceSnapshot.appendSections([.added])
         dataSourceSnapshot.appendItems(fetchResultsController.fetchedObjects ?? [])
         dataSource?.apply(self.dataSourceSnapshot)
     }
@@ -67,7 +74,9 @@ class ShowCollectionViewController: UICollectionViewController {
             guard let detailVC = segue.destination as? ShowDetailViewController,
                 let cell = sender as? ShowCollectionViewCell,
                 let indexPath = self.collectionView.indexPath(for: cell) else { return }
-            detailVC.show = fetchResultsController.object(at: indexPath)
+            
+            guard let show = self.dataSource?.itemIdentifier(for: indexPath) else { return }
+            detailVC.show = show
         }
     }
 }
