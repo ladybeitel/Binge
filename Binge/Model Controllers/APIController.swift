@@ -109,6 +109,15 @@ class APIController {
             }
         }
     }
+    
+    func getEpisodesForShow(id: Int, onSuccess: @escaping([EpisodeRepresentation?]) -> Void) {
+        // queue.sync
+        // get episodes via show id
+        // paginate recursively, store results temporarily
+        // group by season
+        // create season and associate back to show
+        // create episodes and associate back to season
+    }
 }
 
 // MARK - Alamofire delegates
