@@ -40,6 +40,7 @@ class ShowCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         setupDataSource()
         self.navigationController?.navigationBar.tintColor = UIColor.systemPurple
+        navigationItem.hidesBackButton = true
     }
     
     func setupDataSource() {

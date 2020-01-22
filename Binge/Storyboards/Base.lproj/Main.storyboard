@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9eW-G1-hVS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yuO-95-YTb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -20,14 +20,14 @@
             <objects>
                 <viewController id="xkI-lL-GwH" customClass="ShowDetailViewController" customModule="Binge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9D0-zy-Zvp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-UI-r8A">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="463"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="517"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vhs-WQ-6bZ">
-                                        <rect key="frame" x="24" y="80" width="170" height="250"/>
+                                        <rect key="frame" x="24" y="112" width="170" height="250"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="5eY-10-pqo"/>
@@ -35,7 +35,7 @@
                                         </constraints>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wBv-YK-arC">
-                                        <rect key="frame" x="18" y="338" width="376" height="145"/>
+                                        <rect key="frame" x="18" y="370" width="376" height="145"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="145" id="qeQ-Qo-h38"/>
@@ -46,27 +46,27 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="v1h-tV-Acc">
-                                        <rect key="frame" x="214" y="80" width="98" height="250"/>
+                                        <rect key="frame" x="214" y="112" width="98" height="250"/>
                                         <subviews>
                                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" text="Name" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fh6-u3-QsG">
-                                                <rect key="frame" x="0.0" y="0.0" width="98" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="18"/>
                                                 <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HF1-xY-j1x" userLabel="ReleaseDate SV">
-                                                <rect key="frame" x="0.0" y="61.5" width="98" height="38.5"/>
+                                                <rect key="frame" x="0.0" y="64.5" width="98" height="33"/>
                                                 <subviews>
                                                     <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="May 1964" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aQs-uz-RWw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="22"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="19"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
                                                         <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Release Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="C7R-XB-Ecg">
-                                                        <rect key="frame" x="0.0" y="22" width="98" height="16.5"/>
+                                                        <rect key="frame" x="0.0" y="19" width="98" height="14"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="12"/>
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -75,17 +75,17 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xav-l1-wky" userLabel="Network SV">
-                                                <rect key="frame" x="0.0" y="136.5" width="98" height="38.5"/>
+                                                <rect key="frame" x="0.0" y="140.5" width="98" height="33"/>
                                                 <subviews>
                                                     <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="HBO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Lp-a0-d1R">
-                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="22"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="19"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
                                                         <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Network" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fk8-Rb-eVa">
-                                                        <rect key="frame" x="0.0" y="22" width="98" height="16.5"/>
+                                                        <rect key="frame" x="0.0" y="19" width="98" height="14"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="12"/>
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -94,17 +94,17 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="myK-4E-3e4" userLabel="Status SV">
-                                                <rect key="frame" x="0.0" y="211.5" width="98" height="38.5"/>
+                                                <rect key="frame" x="0.0" y="217" width="98" height="33"/>
                                                 <subviews>
                                                     <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Continuing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IBF-n3-Gfy">
-                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="22"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="19"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
                                                         <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WAp-W3-CWY">
-                                                        <rect key="frame" x="0.0" y="22" width="98" height="16.5"/>
+                                                        <rect key="frame" x="0.0" y="19" width="98" height="14"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="12"/>
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,7 +128,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="12y-vx-JfQ">
-                                <rect key="frame" x="0.0" y="483" width="414" height="359"/>
+                                <rect key="frame" x="0.0" y="537" width="414" height="359"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EpisodeCell" rowHeight="80" id="VO1-m5-ibp" customClass="EpisodeTableViewCell" customModule="Binge" customModuleProvider="target">
@@ -143,10 +143,10 @@
                                                     <color key="onTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </switch>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="tT6-Sk-APZ">
-                                                    <rect key="frame" x="20" y="16" width="117.5" height="48"/>
+                                                    <rect key="frame" x="20" y="17.5" width="118.5" height="45.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AF3-K8-3fb">
-                                                            <rect key="frame" x="0.0" y="0.0" width="117.5" height="30"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="118.5" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="FSf-9u-m82"/>
                                                             </constraints>
@@ -155,16 +155,16 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIo-Ku-LYe">
-                                                            <rect key="frame" x="0.0" y="30" width="113.5" height="18"/>
+                                                            <rect key="frame" x="0.0" y="30" width="115" height="15.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ep. " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oip-3f-KbZ">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="21.5" height="18"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="23" height="15.5"/>
                                                                     <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="13"/>
                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aired Episode #" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xi-d0-Xdz">
-                                                                    <rect key="frame" x="21.5" y="0.0" width="92" height="18"/>
+                                                                    <rect key="frame" x="23" y="0.0" width="92" height="15.5"/>
                                                                     <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="13"/>
                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -216,18 +216,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFO-3m-4PB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2705.7971014492755" y="377.67857142857139"/>
+            <point key="canvasLocation" x="3615.9420289855075" y="377.67857142857139"/>
         </scene>
         <!--Search Table View Controller-->
         <scene sceneID="Ofc-eZ-6lo">
             <objects>
                 <viewController id="Dn4-bz-zND" customClass="SearchTableViewController" customModule="Binge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uzg-FY-uh7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" text="" placeholder="I am currently binge watching..." translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgv-EV-6sh">
-                                <rect key="frame" x="0.0" y="56" width="414" height="75"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="iru-kZ-4UQ"/>
                                 </constraints>
@@ -239,7 +239,7 @@
                                 </userDefinedRuntimeAttributes>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6tR-CN-sk5">
-                                <rect key="frame" x="0.0" y="131" width="414" height="711"/>
+                                <rect key="frame" x="0.0" y="163" width="414" height="733"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchShowCell" textLabel="2Dj-LB-S3E" detailTextLabel="3jh-lQ-RPG" rowHeight="80" style="IBUITableViewCellStyleSubtitle" id="nol-3d-B6D">
@@ -289,14 +289,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BBf-mz-SH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2705.7971014492755" y="-285.26785714285711"/>
+            <point key="canvasLocation" x="3615.9420289855075" y="-285.26785714285711"/>
         </scene>
         <!--Show List-->
         <scene sceneID="8xJ-Dk-zFS">
             <objects>
                 <collectionViewController id="Won-3i-Cqz" userLabel="Show List" customClass="ShowCollectionViewController" customModule="Binge" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="8tB-LT-XDi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="Qe7-fZ-bnw">
@@ -355,7 +355,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nE-tB-3Xt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813.0434782608697" y="0.6696428571428571"/>
+            <point key="canvasLocation" x="2723.1884057971015" y="0.6696428571428571"/>
         </scene>
         <!--Launch View Controller-->
         <scene sceneID="lST-wp-bgA">
@@ -398,16 +398,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C8L-g8-wfd"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0JZ-lO-9G4"/>
                     <connections>
                         <outlet property="bunnyNoWhiskers" destination="5pP-n0-N9b" id="eZe-vJ-VmY"/>
                         <outlet property="leftWhiskers" destination="qmV-mv-i4o" id="NbT-cO-G93"/>
                         <outlet property="rightWhiskers" destination="gow-DJ-W5e" id="eOh-Tt-oLW"/>
-                        <segue destination="83G-JR-qfO" kind="show" identifier="ShowMainScreen" id="pPi-Q5-hi0"/>
+                        <segue destination="Won-3i-Cqz" kind="show" identifier="ShowMainScreen" id="FVW-gk-1Uc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NU4-rr-lqC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="62" y="1"/>
+            <point key="canvasLocation" x="971.01449275362324" y="0.6696428571428571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yGO-sP-Dtd">
@@ -416,7 +417,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="2y1-rP-uqG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dfR-cE-3cQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -426,7 +427,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0D9-Vq-YcE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="903" y="1"/>
+            <point key="canvasLocation" x="1813.0434782608697" y="0.6696428571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fbw-Ig-aJL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yuO-95-YTb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="azb-BI-NQJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9eW-G1-hVS" kind="relationship" relationship="rootViewController" id="p2E-fe-qcb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c2H-Df-Zvy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60.869565217391312" y="0.6696428571428571"/>
         </scene>
     </scenes>
     <resources>
@@ -434,4 +453,7 @@
         <image name="AppIcon-Template-Whiskers-Left_1024w" width="1024" height="1024"/>
         <image name="AppIcon-Template-Whiskers-Right_1024w" width="1024" height="1024"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zhl-Y6-uyU"/>
+    </inferredMetricsTieBreakers>
 </document>

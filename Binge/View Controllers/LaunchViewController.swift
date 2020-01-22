@@ -23,7 +23,6 @@ class LaunchViewController: UIViewController {
     }
     
     func wiggleWhiskers() {
-        
         UIView.animate(withDuration: 0.3, delay: 1.0, options: .curveEaseIn, animations: {
             self.leftWhiskers.transform = CGAffineTransform(rotationAngle: -0.02);
             self.rightWhiskers.transform = CGAffineTransform(rotationAngle: 0.02);
