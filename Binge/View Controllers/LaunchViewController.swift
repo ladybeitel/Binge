@@ -2,41 +2,49 @@
 //  LaunchViewController.swift
 //  Binge
 //
-//  Created by Ciara Beitel on 1/9/20.
+//  Created by Ciara Beitel on 1/22/20.
 //  Copyright © 2020 Ciara Beitel. All rights reserved.
 //
 
 import UIKit
 
 class LaunchViewController: UIViewController {
-    
-    var imageView: UIImageView!
 
+    @IBOutlet weak var bunnyNoWhiskers: UIImageView!
+    @IBOutlet weak var leftWhiskers: UIImageView!
+    @IBOutlet weak var rightWhiskers: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureImageView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        imageView.center = self.view.center
+        wiggleWhiskers()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
-    func configureImageView() {
-        imageView = UIImageView(frame: CGRect(x: view.center.x, y: view.center.y, width: 1024, height: 1024))
-        imageView.image = UIImage(named: "Binge-Icons_1024w@1x.png")
-        imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor).isActive = true
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(imageView)
+    func wiggleWhiskers() {
+        
+        UIView.animate(withDuration: 0.3, delay: 1.0, options: .curveEaseIn, animations: {
+            self.leftWhiskers.transform = CGAffineTransform(rotationAngle: -0.02);
+            self.rightWhiskers.transform = CGAffineTransform(rotationAngle: 0.02);
+        }) { (_) in
+            print("Rotating whiskers down.")
+        }
+        UIView.animate(withDuration: 0.3, delay: 1.5, options: .curveEaseIn, animations: {
+            self.leftWhiskers.transform = CGAffineTransform(rotationAngle: 0.02);
+            self.rightWhiskers.transform = CGAffineTransform(rotationAngle: -0.02);
+        }) { (_) in
+            print("Rotating whiskers up.")
+        }
+        UIView.animate(withDuration: 1.5, delay: 2.0, options: .curveEaseIn, animations: {
+            self.leftWhiskers.alpha = 0.0;
+            self.rightWhiskers.alpha = 0.0;
+            self.bunnyNoWhiskers.alpha = 0.0;
+        }) { (_) in
+            print("Fading out.")
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5, execute: {
+            self.performSegue(withIdentifier: "ShowMainScreen", sender: nil)
+        })
     }
 }

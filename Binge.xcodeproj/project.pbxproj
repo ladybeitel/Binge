@@ -40,6 +40,7 @@
 		77DD7E4623BA9F5200A8F9A5 /* Show+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD7E4523BA9F5200A8F9A5 /* Show+Convenience.swift */; };
 		77DD7E4823BAA34D00A8F9A5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD7E4723BAA34D00A8F9A5 /* CoreDataStack.swift */; };
 		77DD7E4A23BAAA9400A8F9A5 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD7E4923BAAA9400A8F9A5 /* EpisodeTableViewCell.swift */; };
+		77F6DC9823D8F83B00D4F3AB /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F6DC9723D8F83B00D4F3AB /* LaunchViewController.swift */; };
 		F453DF0CC223C2A964B4F0BC /* Pods_Binge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4783AD79A94B289CC1B86A /* Pods_Binge.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		77DD7E4523BA9F5200A8F9A5 /* Show+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Show+Convenience.swift"; sourceTree = "<group>"; };
 		77DD7E4723BAA34D00A8F9A5 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		77DD7E4923BAAA9400A8F9A5 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
+		77F6DC9723D8F83B00D4F3AB /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		C9F301EB8351986368317837 /* Pods-Binge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Binge.release.xcconfig"; path = "Target Support Files/Pods-Binge/Pods-Binge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +188,7 @@
 				77C6E87223B526B70073F258 /* SearchTableViewController.swift */,
 				773439D223B958BD004A525E /* ShowCollectionViewController.swift */,
 				7711050123C5086800933BC1 /* ShowDetailViewController.swift */,
+				77F6DC9723D8F83B00D4F3AB /* LaunchViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				772B58B823C149320017F287 /* ShowRepresentation.swift in Sources */,
+				77F6DC9823D8F83B00D4F3AB /* LaunchViewController.swift in Sources */,
 				77DD7E4623BA9F5200A8F9A5 /* Show+Convenience.swift in Sources */,
 				77139DBE23BDBE9600294724 /* ShowCollectionViewCell.swift in Sources */,
 				77139DD223BFF63900294724 /* APIController.swift in Sources */,
