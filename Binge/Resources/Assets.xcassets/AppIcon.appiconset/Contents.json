@@ -8,19 +8,19 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "Binge-Icons_20w@3x.png",
+      "filename" : "AppIcon-Template_20w@3x.png",
       "scale" : "3x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "Binge-Icons_29w@2x.png",
+      "filename" : "AppIcon-Template_29w@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "Binge-Icons_29w@3x.png",
+      "filename" : "AppIcon-Template_29w@3x.png",
       "scale" : "3x"
     },
     {
@@ -36,19 +36,19 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "Binge-Icons_60w@2x.png",
+      "filename" : "AppIcon-Template_60w@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "Binge-Icons_60w@3x.png",
+      "filename" : "AppIcon-Template_60w@3x.png",
       "scale" : "3x"
     },
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "Binge-Icons_20w@1x.png",
+      "filename" : "AppIcon-Template_20w@1x.png",
       "scale" : "1x"
     },
     {
@@ -64,13 +64,13 @@
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "Binge-Icons_29w@2x-1.png",
+      "filename" : "AppIcon-Template_29w@2x-1.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "Binge-Icons_40w@1x.png",
+      "filename" : "AppIcon-Template_40w@1x.png",
       "scale" : "1x"
     },
     {
@@ -81,7 +81,7 @@
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "Binge-Icons_76w@1x.png",
+      "filename" : "AppIcon-Template_76w@1x.png",
       "scale" : "1x"
     },
     {
@@ -97,7 +97,7 @@
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "Binge-Icons_1024w@1x.png",
+      "filename" : "AppIcon-Template_1024w@1x.png",
       "scale" : "1x"
     }
   ],
