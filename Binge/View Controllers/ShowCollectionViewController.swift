@@ -46,8 +46,8 @@ class ShowCollectionViewController: UICollectionViewController {
     func setupDataSource() {
         dataSource = UICollectionViewDiffableDataSource <Section, Show>(collectionView: self.collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, show: Show) -> UICollectionViewCell? in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ShowCollectionViewCell
-            if let banner = show.banner {
-                cell.showBannerImage.load(url: banner)
+            if let poster = show.poster {
+                cell.showPosterImage.load(url: poster)
             }
             return cell
         }

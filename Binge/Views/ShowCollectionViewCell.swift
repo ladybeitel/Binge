@@ -9,5 +9,5 @@
 import UIKit
 
 class ShowCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var showBannerImage: UIImageView!
+    @IBOutlet weak var showPosterImage: UIImageView!
 }

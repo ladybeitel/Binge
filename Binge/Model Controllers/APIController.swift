@@ -88,7 +88,7 @@ class APIController {
                             formatter.dateFormat = "yyyy-MM-dd"
                             let date = formatter.date(from: searchResult["firstAired"].stringValue)
                             let show = ShowRepresentation(
-                                banner: searchResult["banner"].stringValue,
+                                poster: searchResult["poster"].stringValue,
                                 id: searchResult["id"].int16Value,
                                 name: searchResult["seriesName"].stringValue,
                                 network: searchResult["network"].stringValue,

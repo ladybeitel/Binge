@@ -12,7 +12,7 @@ import CoreData
 extension Show {
     var showRepresentation: ShowRepresentation? {
         guard let releaseDate = releaseDate else { return nil }
-        return ShowRepresentation(banner: banner,
+        return ShowRepresentation(poster: poster,
                                   id: id,
                                   name: name,
                                   network: network,
@@ -21,9 +21,9 @@ extension Show {
                                   status: status)
     }
     
-    convenience init(banner: String?, id: Int16, name: String, network: String?, overview: String?, releaseDate: Date?, status: String?, context: NSManagedObjectContext) {
+    convenience init(poster: String?, id: Int16, name: String, network: String?, overview: String?, releaseDate: Date?, status: String?, context: NSManagedObjectContext) {
         self.init(context: context)
-        self.banner = banner
+        self.poster = poster
         self.id = id
         self.name = name
         self.network = network
@@ -33,7 +33,7 @@ extension Show {
     }
     
     @discardableResult convenience init?(showRepresentation: ShowRepresentation, context: NSManagedObjectContext) {
-        self.init(banner: showRepresentation.banner,
+        self.init(poster: showRepresentation.poster,
                   id: showRepresentation.id,
                   name: showRepresentation.name,
                   network: showRepresentation.network,

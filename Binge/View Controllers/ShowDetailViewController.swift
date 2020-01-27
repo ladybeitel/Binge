@@ -51,7 +51,7 @@ class ShowDetailViewController: UIViewController {
     }
     
     func updateView() {
-        guard let show = show, let banner = show.banner, let releaseDate = show.releaseDate else { return }
+        guard let show = show, let poster = show.poster, let releaseDate = show.releaseDate else { return }
         if isViewLoaded {
             let formatter = DateFormatter()
             formatter.dateFormat = "MMMM yyyy"
@@ -60,7 +60,7 @@ class ShowDetailViewController: UIViewController {
             showNetwork.text = show.network
             showStatus.text = show.status
             showDescription.text = show.overview
-            showPosterImage.load(url: banner)
+            showPosterImage.load(url: poster)
         }
     }
     

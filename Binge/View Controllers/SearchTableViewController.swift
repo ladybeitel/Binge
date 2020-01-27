@@ -59,6 +59,7 @@ extension SearchTableViewController: UITableViewDelegate, UITableViewDataSource 
 extension SearchTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchText = searchBar.text?.lowercased() else { return }
+        searchBar.resignFirstResponder()
         APIController.shared.searchShows(name: searchText) { (result) in
             DispatchQueue.main.async {
                 self.searchResults = result
@@ -66,4 +67,5 @@ extension SearchTableViewController: UISearchBarDelegate {
             }
         }
     }
+    
 }

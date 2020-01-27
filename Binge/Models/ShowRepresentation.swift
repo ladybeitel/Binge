@@ -9,7 +9,7 @@
 import Foundation
 
 struct ShowRepresentation {
-    var banner: String?
+    var poster: String?
     var id: Int16
     var name: String
     var network: String?

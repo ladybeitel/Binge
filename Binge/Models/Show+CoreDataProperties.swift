@@ -17,7 +17,7 @@ extension Show {
         return NSFetchRequest<Show>(entityName: "Show")
     }
 
-    @NSManaged public var banner: String?
+    @NSManaged public var poster: String?
     @NSManaged public var id: Int16
     @NSManaged public var name: String
     @NSManaged public var network: String?
