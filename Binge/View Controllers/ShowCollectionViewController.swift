@@ -69,6 +69,13 @@ class ShowCollectionViewController: UICollectionViewController {
         return fetchResultsController.sections?[section].numberOfObjects ?? 0
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        guard let show = self.dataSource?.itemIdentifier(for: indexPath) else { return }
+        dataSourceSnapshot.deleteItems([show])
+        dataSource?.apply(dataSourceSnapshot, animatingDifferences: true)
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowDetailVCSegue" {
@@ -89,4 +96,27 @@ extension ShowCollectionViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         updateCollectionView()
     }
+    
+//    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
+//                    didChange anObject: Any,
+//                    at indexPath: IndexPath?,
+//                    for type: NSFetchedResultsChangeType,
+//                    newIndexPath: IndexPath?) {
+//        switch type {
+//        case .insert:
+//            guard let newIndexPath = newIndexPath else { return }
+//            collectionView.insertItems(at: [newIndexPath])
+//        case .update:
+//            guard let indexPath = indexPath else { return }
+//            collectionView.reloadItems(at: [indexPath])
+//        case .move:
+//            guard let oldIndexPath = indexPath,
+//                let newIndexPath = newIndexPath else { return }
+//            collectionView.deleteItems(at: [oldIndexPath])
+//            collectionView.insertItems(at: [newIndexPath])
+//        case .delete:
+//            guard let indexPath = indexPath else { return }
+//            collectionView.deleteItems(at: [indexPath])
+//        }
+//    }
 }
