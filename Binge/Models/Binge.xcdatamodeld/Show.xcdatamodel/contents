@@ -22,8 +22,8 @@
         <relationship name="seasons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Season" inverseName="show" inverseEntity="Season"/>
     </entity>
     <elements>
-        <element name="Episode" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Season" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Show" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Episode" positionX="0" positionY="0" width="128" height="103"/>
+        <element name="Season" positionX="0" positionY="0" width="128" height="88"/>
+        <element name="Show" positionX="0" positionY="0" width="128" height="163"/>
     </elements>
 </model>

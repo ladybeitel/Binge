@@ -36,6 +36,7 @@
 		77C6E85E23B5041A0073F258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77C6E85D23B5041A0073F258 /* Assets.xcassets */; };
 		77C6E86123B5041A0073F258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C6E85F23B5041A0073F258 /* LaunchScreen.storyboard */; };
 		77C6E87323B526B70073F258 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C6E87223B526B70073F258 /* SearchTableViewController.swift */; };
+		77D5843B23EA2F480076AE7D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D5843A23EA2F480076AE7D /* TabBarController.swift */; };
 		77DD7E4223BA9A0400A8F9A5 /* Binge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77DD7E4023BA9A0400A8F9A5 /* Binge.xcdatamodeld */; };
 		77DD7E4623BA9F5200A8F9A5 /* Show+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD7E4523BA9F5200A8F9A5 /* Show+Convenience.swift */; };
 		77DD7E4823BAA34D00A8F9A5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD7E4723BAA34D00A8F9A5 /* CoreDataStack.swift */; };
@@ -79,6 +80,7 @@
 		77C6E86023B5041A0073F258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77C6E86223B5041A0073F258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77C6E87223B526B70073F258 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		77D5843A23EA2F480076AE7D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		77DD7E4123BA9A0400A8F9A5 /* Show.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Show.xcdatamodel; sourceTree = "<group>"; };
 		77DD7E4523BA9F5200A8F9A5 /* Show+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Show+Convenience.swift"; sourceTree = "<group>"; };
 		77DD7E4723BAA34D00A8F9A5 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				773439D223B958BD004A525E /* ShowCollectionViewController.swift */,
 				7711050123C5086800933BC1 /* ShowDetailViewController.swift */,
 				77F6DC9723D8F83B00D4F3AB /* LaunchViewController.swift */,
+				77D5843A23EA2F480076AE7D /* TabBarController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				772B58B823C149320017F287 /* ShowRepresentation.swift in Sources */,
 				77F6DC9823D8F83B00D4F3AB /* LaunchViewController.swift in Sources */,
 				77DD7E4623BA9F5200A8F9A5 /* Show+Convenience.swift in Sources */,
+				77D5843B23EA2F480076AE7D /* TabBarController.swift in Sources */,
 				77139DBE23BDBE9600294724 /* ShowCollectionViewCell.swift in Sources */,
 				77139DD223BFF63900294724 /* APIController.swift in Sources */,
 				7711050A23C66C8C00933BC1 /* Show+CoreDataProperties.swift in Sources */,

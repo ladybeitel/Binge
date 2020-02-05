@@ -18,6 +18,12 @@ class LaunchViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Hide the Navigation Bar
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         wiggleWhiskers()
     }
